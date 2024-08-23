@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Tax Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Indian Tax Liability Calculator</h1>
+        <form id="tax-form">
+            <div class="form-group">
+                <label for="income">Enter Annual Income (₹):</label>
+                <input type="number" id="income" name="income" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Enter Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="deductions80C">Enter Deductions under Section 80C (₹):</label>
+                <input type="number" id="deductions80C" name="deductions80C" value="0">
+            </div>
+            <div class="form-group">
+                <label for="deductions24b">Enter Deductions under Section 24(b) (Home Loan Interest) (₹):</label>
+                <input type="number" id="deductions24b" name="deductions24b" value="0">
+            </div>
+            <div class="form-group">
+                <label for="deductionsHRA">Enter Deductions for HRA (₹):</label>
+                <input type="number" id="deductionsHRA" name="deductionsHRA" value="0">
+            </div>
+            <button type="button" onclick="calculateTax()">Calculate Tax</button>
+        </form>
+        <div id="result">
+            <p id="tax-output">Your tax liability will appear here.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
